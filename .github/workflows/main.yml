@@ -26,10 +26,10 @@ jobs:
      run: dotnet restore ./HelloWorldProgram.sln
 
    - name: Build
-     run: dotnet restore ./HelloWorldProgram.sln --configuration Release --no-restore
+     run: dotnet build ./HelloWorldProgram.sln --configuration Release --no-restore
 
    - name: publish
-     run: dotnet restore ./HelloWorldProgram.sln --configuration Release --no-build --output '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
+     run: dotnet publish ./HelloWorldProgram.sln --configuration Release --no-build --output '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
 
    - name: Deployment
      uses: azure/webapps-deploy@v2
