@@ -33,6 +33,12 @@
     "iisExpress": {
       "applicationUrl": "http://localhost:63805",
       "sslPort": 44396
+    },
+    "Project": {
+      "environmentVariables": {
+        "SORTED_LIST_API_URL": "https://localhost:5000/api/people/sorted",
+        "SUBSTRING_API_URL": "https://localhost:5000/api/substring/longest-substring"
+      }
     }
   }
 }

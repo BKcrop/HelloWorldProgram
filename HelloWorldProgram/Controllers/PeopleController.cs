@@ -8,6 +8,12 @@ namespace HelloWorldProgram.Controllers
     [ApiController]
     public class PeopleController : ControllerBase
     {
+        private readonly string _sortedListApiUrl;
+        public PeopleController()
+        {
+            // Fetch the Sorted List API URL from the environment variable
+            _sortedListApiUrl = Environment.GetEnvironmentVariable("SORTED_LIST_API_URL");
+        }
         [HttpGet("sorted")]
         public IActionResult GetSortedPeople()
         {

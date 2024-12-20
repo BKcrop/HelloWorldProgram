@@ -7,6 +7,13 @@ namespace HelloWorldProgram.Controllers
     [ApiController]
     public class SubstringController : ControllerBase
     {
+        private readonly string _apiUrl;
+
+        public SubstringController()
+        {
+            // Fetch the API URL from the environment variable
+            _apiUrl = Environment.GetEnvironmentVariable("SUBSTRING_API_URL");
+        }
         [HttpGet("longest-substring")]
         public IActionResult GetLongestSubstring([FromQuery] string input)
         {
