@@ -21,7 +21,9 @@ namespace HelloWorldProgram.Controllers
             {
                 new Person { Name = "Ramesh", Age = 33 },
                 new Person { Name = "Jensen", Age = 39 },
-                new Person { Name = "Nithis", Age = 30 }
+                new Person { Name = "Nithis", Age = 30 },
+                new Person { Name = "Kannan", Age = 25},
+                new Person { Name = "Balaji", Age = 21}
             };
 
             var sortedPeople = people.OrderBy(p => p.Age).ToList();
